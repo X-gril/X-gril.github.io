@@ -63,10 +63,10 @@
           </ul>
         </div>
         <div class='newsTp'>
-            <a href="http://roll.sohu.com/20140707/n401863214.shtml">九寨沟-四80后青年创业</a> 
-            <a href="http://fashion.ppsj.com.cn/2014-7-8/4648445324.html" style="display:none">Chanel巴黎2014秋冬高定秀</a>
-            <a href="http://business.sohu.com/20140709/n401999733.shtml" style="display:none">巴西球迷别哭-世界杯惨败有利于贵国经济</a>
-            <a href="http://spzx.foods1.com/show_2576507.htm" style="display:none">嘿！重庆小面。</a>
+            <a href="" id='a1'></a> 
+            <a href="" style="display:none" id='a2'></a>
+            <a href="" style="display:none" id='a3'></a>
+            <a href="" style="display:none" id='a4'></a>
         </div>
     </div>
   </div>
@@ -80,6 +80,16 @@
         document.querySelector('#image2').setAttribute('src',data['data'][1+fg].image);
         document.querySelector('#image3').setAttribute('src',data['data'][2+fg].image);
         document.querySelector('#image4').setAttribute('src',data['data'][3+fg].image);
+
+        document.querySelector('#a1').setAttribute('href',data['data'][0+fg].news);
+        document.querySelector('#a2').setAttribute('href',data['data'][1+fg].news);
+        document.querySelector('#a3').setAttribute('href',data['data'][2+fg].news);
+        document.querySelector('#a4').setAttribute('href',data['data'][3+fg].news);
+
+        document.querySelector('#a1').innerHTML(data['data'][0+fg].Name);
+        document.querySelector('#a2').innerHTML(data['data'][1+fg].Name);
+        document.querySelector('#a3').innerHTML(data['data'][2+fg].Name);
+        document.querySelector('#a4').innerHTML(data['data'][3+fg].Name);
        
       }
 

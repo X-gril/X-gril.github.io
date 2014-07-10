@@ -5,39 +5,7 @@
   <title>新闻图片轮播</title>
   <base target="_blank" /> 
   <script type="text/javascript" src="http://keleyi.com/keleyi/pmedia/jquery/jquery-1.10.2.min.js"></script>
-  <script>
-    void function(){
-      var url='news.json';
-
-      function processData(data){
-        document.querySelector('#image1').setAttribute('src',data[0].image);
-        document.querySelector('#image2').setAttribute('src',data[1].image);
-        document.querySelector('#image3').setAttribute('src',data[2].image);
-        document.querySelector('#image4').setAttribute('src',data[3].image);
-       
-      }
-
-      function handler(){
-        if(this.readyState==this.DONE){
-          if(this.status==200){
-            try{
-              processData(JSON.parse(this.responseText));
-            }catch(ex){
-              console.log(ex.message);
-            }
-          }
-        }
-      }
-
-      function ajax(){
-        var client=new XMLHttpRequest();
-        client.onreadystatechange=handler;
-        client.open('GET',url);
-        client.send();
-      }
-      document.querySelector('input').addEventListener('click',function(){ajax();});
-    }();
-  </script>
+  
   <script typr="text/javascript">
      $(document).ready(function () {
         var len=$(".newsImg img").length;
@@ -101,5 +69,38 @@
         </div>
     </div>
   </div>
+  <script>
+    void function(){
+      var url='news.json';
+
+      function processData(data){
+        document.querySelector('#image1').setAttribute('src',data[0].image);
+        document.querySelector('#image2').setAttribute('src',data[1].image);
+        document.querySelector('#image3').setAttribute('src',data[2].image);
+        document.querySelector('#image4').setAttribute('src',data[3].image);
+       
+      }
+
+      function handler(){
+        if(this.readyState==this.DONE){
+          if(this.status==200){
+            try{
+              processData(JSON.parse(this.responseText));
+            }catch(ex){
+              console.log(ex.message);
+            }
+          }
+        }
+      }
+
+      function ajax(){
+        var client=new XMLHttpRequest();
+        client.onreadystatechange=handler;
+        client.open('GET',url);
+        client.send();
+      }
+      document.querySelector('input').addEventListener('click',function(){ajax();});
+    }();
+  </script>
 </body>
 </html>

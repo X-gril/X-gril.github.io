@@ -74,9 +74,9 @@
       var url='news.json';
 
       function processData(data){
-        document.querySelector('#image1').setAttribute('src',data[0].image);
+        document.querySelector('#image1').setAttribute('src',data[0].news);
         document.querySelector('#image2').setAttribute('src',data[1].image);
-        document.querySelector('#image3').setAttribute('src',data[2].image);
+        document.querySelector('#image3').setAttribute('src',data[2].news);
         document.querySelector('#image4').setAttribute('src',data[3].image);
        
       }

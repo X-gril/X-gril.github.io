@@ -74,11 +74,10 @@
       var url='news.json';
 
       function processData(data){
-        var Data=data.newsList;
-        document.querySelector('#image1').setAttribute('src',Data[0].image);
-        document.querySelector('#image2').setAttribute('src',Data[1].image);
-        document.querySelector('#image3').setAttribute('src',Data[2].image);
-        document.querySelector('#image4').setAttribute('src',Data[3].image);
+        document.querySelector('#image1').setAttribute('src',data[0].image);
+        document.querySelector('#image2').setAttribute('src',data[1].image);
+        document.querySelector('#image3').setAttribute('src',data[2].image);
+        document.querySelector('#image4').setAttribute('src',data[3].image);
        
       }
 

@@ -195,6 +195,8 @@
       ajax();
 
       $(".newsIx2 li").click(function(){fg=($(".newsIx2 li").index(this)*5);ajax();});
+      document.querySelector('#input11').addEventListener('click',function(evt){fg=0;ajax();evt.stopPropagation();});
+      document.querySelector('#input12').addEventListener('click',function(evt){fg=5;ajax();evt.stopPropagation();});
     }();
   </script>
 </body>

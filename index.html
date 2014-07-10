@@ -74,7 +74,7 @@
       var url='news.json';
 
       function processData(data){
-        var Data=data.data;
+        var Data=data.newsList;
         document.querySelector('#image1').setAttribute('src',Data[0].image);
         document.querySelector('#image2').setAttribute('src',Data[1].image);
         document.querySelector('#image3').setAttribute('src',Data[2].image);

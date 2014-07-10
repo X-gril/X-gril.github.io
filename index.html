@@ -14,26 +14,7 @@
         document.querySelector('#image2').setAttribute('src',data[1].image);
         document.querySelector('#image3').setAttribute('src',data[2].image);
         document.querySelector('#image4').setAttribute('src',data[3].image);
-        $(document).ready(function () {
-        var len=$(".newsImg img").length;
-        var ix=0;
-        var t=true;
-
-        function imageAppear(i){
-            $(".newsImg img").eq(i).stop(true,true).fadeIn(1000).siblings("img").hide();
-            $(".newsIx li").removeClass("newsIxHover");
-            $(".newsIx li").eq(i).addClass("newsIxHover");
-            $(".newsTp a").eq(i).stop(true,true).fadeIn(1000).siblings("a").hide("slow");
-        }
-        imageAppear(ix);
-
-        $(".newsIx li").click(function(){ix=$(".newsIx li").index(this);imageAppear(ix);t=false;});
-
-        function autoSwitch(){
-            setInterval(function(){if(t){ix=(ix+1)%len;imageAppear(ix);}t=true;},3000);
-        }
-        autoSwitch();
-    });
+       
       }
 
       function handler(){
@@ -56,6 +37,28 @@
       }
       ajax();
     }();
+  </script>
+  <script typr="text/javascript">
+     $(document).ready(function () {
+        var len=$(".newsImg img").length;
+        var ix=0;
+        var t=true;
+
+        function imageAppear(i){
+            $(".newsImg img").eq(i).stop(true,true).fadeIn(1000).siblings("img").hide();
+            $(".newsIx li").removeClass("newsIxHover");
+            $(".newsIx li").eq(i).addClass("newsIxHover");
+            $(".newsTp a").eq(i).stop(true,true).fadeIn(1000).siblings("a").hide("slow");
+        }
+        imageAppear(ix);
+
+        $(".newsIx li").click(function(){ix=$(".newsIx li").index(this);imageAppear(ix);t=false;});
+
+        function autoSwitch(){
+            setInterval(function(){if(t){ix=(ix+1)%len;imageAppear(ix);}t=true;},3000);
+        }
+        autoSwitch();
+    });
   </script>
  
   <style type="text/css">

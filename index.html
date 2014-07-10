@@ -55,9 +55,11 @@
         <div class='newsIx' style="margin:0 auto;">
           <ul>
             <li class="newsIxHover">1</li>
+            <input type="button" value="上一页" id='input1'>
             <li>2</li>
             <li>3</li>
             <li>4</li>
+            <input type="button" value="下一页" id='input2'>
           </ul>
         </div>
         <div class='newsTp'>
@@ -71,12 +73,13 @@
   <script>
     void function(){
       var url='news.json';
+      var fg=0;
 
       function processData(data){
-        document.querySelector('#image1').setAttribute('src',data['data'][0].image);
-        document.querySelector('#image2').setAttribute('src',data['data'][1].image);
-        document.querySelector('#image3').setAttribute('src',data['data'][2].image);
-        document.querySelector('#image4').setAttribute('src',data['data'][3].image);
+        document.querySelector('#image1').setAttribute('src',data['data'][0+fg].image);
+        document.querySelector('#image2').setAttribute('src',data['data'][1+fg].image);
+        document.querySelector('#image3').setAttribute('src',data['data'][2+fg].image);
+        document.querySelector('#image4').setAttribute('src',data['data'][3+fg].image);
        
       }
 
@@ -100,6 +103,9 @@
         client.send();
       }
       ajax();
+
+      document.querySelector('#input2').addEventListener('click',function(evt){fg=4;ajax();evt.stopPropagation();});
+      document.querySelector('#input1').addEventListener('click',function(evt){fg=0;ajax();evt.stopPropagation();});
     }();
   </script>
 </body>

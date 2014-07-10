@@ -77,8 +77,8 @@
     <div class='newsX2' style="margin:auto;">
         <div class='newsIx2' style="margin:0 0 auto;">
           <ul>
-            <li class='newsIxHover2'>1</li>
-            <li class='newsIxHover2'>2</li>
+            <li class='newsIxHover2' id='n11'>1</li>
+            <li class='newsIxHover2' id='n12'>2</li>
             <input type="button" value="上一页" id='input11'>
             <input type="button" value="下一页" id='input12'>
             
@@ -95,8 +95,8 @@
     <div class='newsX2' style="margin:auto;">
         <div class='newsIx2' style="margin:0 0 auto;">
           <ul>
-            <li class='newsIxHover2'>1</li>
-            <li class='newsIxHover2'>2</li>
+            <li class='newsIxHover2' id='n21'>1</li>
+            <li class='newsIxHover2' id='n22'>2</li>
             <input type="button" value="上一页" id='input21'>
             <input type="button" value="下一页" id='input22'>
             
@@ -211,7 +211,8 @@
       }
       ajax();
 
-      $(".newsIx2 li").click(function(){fg=($(".newsIx2 li").index(this)*5);ajax();});
+      $("#n11").click(function(){fg=0;ajax();});
+      $("#n12").click(function(){fg=5;ajax();});
       document.querySelector('#input11').addEventListener('click',function(evt){fg=0;ajax();evt.stopPropagation();});
       document.querySelector('#input12').addEventListener('click',function(evt){fg=5;ajax();evt.stopPropagation();});
     }();
@@ -268,7 +269,8 @@
       }
       ajax();
 
-      $(".newsIx2 li").click(function(){fg=($(".newsIx2 li").index(this)*5);ajax();});
+      $("#n21").click(function(){fg=0;ajax();});
+      $("#n22").click(function(){fg=5;ajax();});
       document.querySelector('#input21').addEventListener('click',function(evt){fg=0;ajax();evt.stopPropagation();});
       document.querySelector('#input22').addEventListener('click',function(evt){fg=5;ajax();evt.stopPropagation();});
     }();

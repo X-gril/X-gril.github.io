@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8"/> 
+  <title>新闻图片轮播</title>
+  <base target="_blank" /> 
+  <script type="text/javascript" src="http://keleyi.com/keleyi/pmedia/jquery/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript">
+
+    void function(){
+      var url='news.json';
+
+      function processData(data){
+        document.querySelector('#image1').src=data[0].image;
+        document.querySelector('#image2').src=data[1].image;
+        document.querySelector('#image3').src=data[2].image;
+        document.querySelector('#image4').src=data[3].image;
+      }
+
+      function handler(){
+        if(this.readyState==this.DONE){
+          if(this.status==200){
+            try{
+              processData(ISON.parse(this.responseText));
+            }catch(ex){
+              console.log(ex.message);
+            }
+          }
+        }
+      }
+
+      function ajax(){
+        var client=new XMLHttpRequest();
+        client.onreadystatechange=handler;
+        client.open('GET',url);
+        client.send();
+      }
+      ajax();
+    }();
+
+    $(document).ready(function () {
+        var len=$(".newsImg img").length;
+        var ix=0;
+        var t=true;
+
+        function imageAppear(i){
+            $(".newsImg img").eq(i).stop(true,true).fadeIn(1000).siblings("img").hide();
+            $(".newsIx li").removeClass("newsIxHover");
+            $(".newsIx li").eq(i).addClass("newsIxHover");
+            $(".newsTp a").eq(i).stop(true,true).fadeIn(1000).siblings("a").hide("slow");
+        }
+        imageAppear(ix);
+
+        $(".newsIx li").click(function(){ix=$(".newsIx li").index(this);imageAppear(ix);t=false;});
+
+        function autoSwitch(){
+            setInterval(function(){if(t){ix=(ix+1)%len;imageAppear(ix);}t=true;},3000);
+        }
+        autoSwitch();
+    });
+  </script>
+  <style type="text/css">
+    *{margin:0px;padding: 0px;}
+    .newsIxHover{background-color: #A9A9A9;}
+    .newsImg{width:500px;height:300px;}
+    .newsIx{position:relative;margin-right: 5px;top:-50px;float:right;}
+    .newsIx li{list-style-type:none;width:18px;height:16px;line-height:16px;cursor:pointer;margin:0 3px;font-size:12px;font-weight:600;text-align:center;float:left;display:inline;}
+    .newsTp{position:relative;padding-left: 10px;top:-25px;height:22px;line-height: 20px;}
+    .newsTp a{text-decoration: none;color:white;font-size:12px;background-color: gray;}
+    .newsTp a:hover{color:blue;}
+    .newsX{width:500px;height:300px;border:solid 1px #c1c1c1;}
+  </style>
+</head>
+
+<body>
+  <div style="width:500px;margin:0 auto;"
+    <h4>新闻连连看</h4>
+    <div class='newsX'>
+        <div class='newsImg'>
+          <img src="" width='100%' height='100%' id='image1'>
+          <img src="" width='100%' height='100%' id='image2'>
+          <img src="" width='100%' height='100%' id='image3'>
+          <img src="" width='100%' height='100%' id='image4'>
+        </div>
+        <div class='newsIx'>
+          <ul>
+            <li class="newsIxHover">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+          </ul>
+        </div>
+        <div class='newsTp'>
+            <a href="http://roll.sohu.com/20140707/n401863214.shtml">九寨沟-四80后青年创业</a> 
+            <a href="http://fashion.ppsj.com.cn/2014-7-8/4648445324.html" style="display:none">Chanel巴黎2014秋冬高定秀</a>
+            <a href="http://business.sohu.com/20140709/n401999733.shtml" style="display:none">巴西球迷别哭-世界杯惨败有利于贵国经济</a>
+            <a href="http://spzx.foods1.com/show_2576507.htm" style="display:none">嘿！重庆小面。</a>
+        </div>
+    </div>
+  </div>
+</body>
+</html>

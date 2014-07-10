@@ -74,11 +74,11 @@
       var url='news.json';
 
       function processData(data){
-        console.log(data);
-        document.querySelector('#image1').setAttribute('src',data[0].image);
-        document.querySelector('#image2').setAttribute('src',data[1].image);
-        document.querySelector('#image3').setAttribute('src',data[2].image);
-        document.querySelector('#image4').setAttribute('src',data[3].image);
+        var Data=data.data;
+        document.querySelector('#image1').setAttribute('src',Data[0].image);
+        document.querySelector('#image2').setAttribute('src',Data[1].image);
+        document.querySelector('#image3').setAttribute('src',Data[2].image);
+        document.querySelector('#image4').setAttribute('src',Data[3].image);
        
       }
 
@@ -88,7 +88,6 @@
             try{
               processData(JSON.parse(this.responseText)[0]);
             }catch(ex){
-              console.log(JSON.parse(this.responseText)[0]);
               console.log(ex.message);
             }
           }

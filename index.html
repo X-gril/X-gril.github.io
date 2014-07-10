@@ -75,7 +75,6 @@
         </div>
     </div>
     <div class='newsX2' style="margin:auto;">
-        
         <div class='newsIx2' style="margin:0 0 auto;">
           <ul>
             <li class='newsIxHover2'>1</li>
@@ -86,11 +85,29 @@
           </ul>
           <h6>苹果CEO库克现身同性恋游行背指出柜 全部评论（10）</h6>
           <hr/>
-          <p><span id='person11' font-color='blue'></span><br/><span id='comment11'></span><br/><span id='time11'></span>分钟前 来自<span id='source11'></span> 转发 回复</p><hr/>
-          <p><span id='person12' font-color='blue'></span><br/><span id='comment12'></span><br/><span id='time12'></span>分钟前 来自<span id='source12'></span> 转发 回复</p><hr/>
-          <p><span id='person13' font-color='blue'></span><br/><span id='comment13'></span><br/><span id='time13'></span>分钟前 来自<span id='source13'></span> 转发 回复</p><hr/>
-          <p><span id='person14' font-color='blue'></span><br/><span id='comment14'></span><br/><span id='time14'></span>分钟前 来自<span id='source14'></span> 转发 回复</p><hr/>
-          <p><span id='person15' font-color='blue'></span><br/><span id='comment15'></span><br/><span id='time15'></span>分钟前 来自<span id='source15'></span> 转发 回复</p><hr/>
+          <p><span id='person11'></span><br/><span id='comment11'></span><br/><span id='time11'></span>分钟前 来自<span id='source11'></span> 转发 回复</p><hr/>
+          <p><span id='person12'></span><br/><span id='comment12'></span><br/><span id='time12'></span>分钟前 来自<span id='source12'></span> 转发 回复</p><hr/>
+          <p><span id='person13'></span><br/><span id='comment13'></span><br/><span id='time13'></span>分钟前 来自<span id='source13'></span> 转发 回复</p><hr/>
+          <p><span id='person14'></span><br/><span id='comment14'></span><br/><span id='time14'></span>分钟前 来自<span id='source14'></span> 转发 回复</p><hr/>
+          <p><span id='person15'></span><br/><span id='comment15'></span><br/><span id='time15'></span>分钟前 来自<span id='source15'></span> 转发 回复</p><hr/>
+        </div>
+    </div>
+    <div class='newsX2' style="margin:auto;">
+        <div class='newsIx2' style="margin:0 0 auto;">
+          <ul>
+            <li class='newsIxHover2'>1</li>
+            <li class='newsIxHover2'>2</li>
+            <input type="button" value="上一页" id='input21'>
+            <input type="button" value="下一页" id='input22'>
+            
+          </ul>
+          <h6>直击巴黎时装周：香奈儿秋冬大秀上演 全部评论（10）</h6>
+          <hr/>
+          <p><span id='person21'></span><br/><span id='comment21'></span><br/><span id='time21'></span>分钟前 来自<span id='source21'></span> 转发 回复</p><hr/>
+          <p><span id='person22'></span><br/><span id='comment22'></span><br/><span id='time22'></span>分钟前 来自<span id='source22'></span> 转发 回复</p><hr/>
+          <p><span id='person23'></span><br/><span id='comment23'></span><br/><span id='time23'></span>分钟前 来自<span id='source23'></span> 转发 回复</p><hr/>
+          <p><span id='person24'></span><br/><span id='comment24'></span><br/><span id='time24'></span>分钟前 来自<span id='source24'></span> 转发 回复</p><hr/>
+          <p><span id='person25'></span><br/><span id='comment25'></span><br/><span id='time25'></span>分钟前 来自<span id='source25'></span> 转发 回复</p><hr/>
         </div>
     </div>
   </div>
@@ -197,6 +214,63 @@
       $(".newsIx2 li").click(function(){fg=($(".newsIx2 li").index(this)*5);ajax();});
       document.querySelector('#input11').addEventListener('click',function(evt){fg=0;ajax();evt.stopPropagation();});
       document.querySelector('#input12').addEventListener('click',function(evt){fg=5;ajax();evt.stopPropagation();});
+    }();
+  </script>
+  <script>
+    void function(){
+      var url='news2.json';
+      var fg=0;
+
+      function processData(data){
+        document.querySelector('#person21').innerHTML=data['news2'][0+fg].name2;
+        document.querySelector('#person22').innerHTML=data['news2'][1+fg].name2;
+        document.querySelector('#person23').innerHTML=data['news2'][2+fg].name2;
+        document.querySelector('#person24').innerHTML=data['news2'][3+fg].name2;
+        document.querySelector('#person25').innerHTML=data['news2'][4+fg].name2;
+
+        document.querySelector('#comment21').innerHTML=data['news2'][0+fg].comment;
+        document.querySelector('#comment22').innerHTML=data['news2'][1+fg].comment;
+        document.querySelector('#comment23').innerHTML=data['news2'][2+fg].comment;
+        document.querySelector('#comment24').innerHTML=data['news2'][3+fg].comment;
+        document.querySelector('#comment25').innerHTML=data['news2'][4+fg].comment;
+
+        document.querySelector('#time21').innerHTML=data['news2'][0+fg].time2;
+        document.querySelector('#time22').innerHTML=data['news2'][1+fg].time2;
+        document.querySelector('#time23').innerHTML=data['news2'][2+fg].time2;
+        document.querySelector('#time24').innerHTML=data['news2'][3+fg].time2;
+        document.querySelector('#time25').innerHTML=data['news2'][4+fg].time2;
+
+        document.querySelector('#source21').innerHTML=data['news2'][0+fg].source2;
+        document.querySelector('#source22').innerHTML=data['news2'][1+fg].source2;
+        document.querySelector('#source23').innerHTML=data['news2'][2+fg].source2;
+        document.querySelector('#source24').innerHTML=data['news2'][3+fg].source2;
+        document.querySelector('#source25').innerHTML=data['news2'][4+fg].source2;
+      }
+
+      function handler(){
+        if(this.readyState==this.DONE){
+          if(this.status==200){
+            try{
+              processData(JSON.parse(this.responseText));
+            }catch(ex){
+              console.log(JSON.parse(this.responseText));
+              console.log(ex.message);
+            }
+          }
+        }
+      }
+
+      function ajax(){
+        var client=new XMLHttpRequest();
+        client.onreadystatechange=handler;
+        client.open('GET',url);
+        client.send();
+      }
+      ajax();
+
+      $(".newsIx2 li").click(function(){fg=($(".newsIx2 li").index(this)*5);ajax();});
+      document.querySelector('#input21').addEventListener('click',function(evt){fg=0;ajax();evt.stopPropagation();});
+      document.querySelector('#input22').addEventListener('click',function(evt){fg=5;ajax();evt.stopPropagation();});
     }();
   </script>
 </body>

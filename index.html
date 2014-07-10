@@ -88,7 +88,7 @@
             try{
               processData(JSON.parse(this.responseText)[0]);
             }catch(ex){
-              console.log(JSON.parse(this.responseText));
+              console.log(JSON.parse(this.responseText)[0]);
               console.log(ex.message);
             }
           }

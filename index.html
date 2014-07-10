@@ -39,6 +39,11 @@
     .newsTp a{text-decoration: none;color:white;font-size:12px;background-color: gray;}
     .newsTp a:hover{color:blue;}
     .newsX{width:700px;height:500px;}
+
+    .newsIxHover2{background-color: #A9A9A9;}
+    .newsIx2{position:relative;margin-right:5px;top:-50px;}
+    .newsIx2 li{list-style-type:none;width:18px;height:16px;line-height:16px;cursor:pointer;margin:0 3px;font-size:12px;font-weight:600;text-align:center;float:left;display:inline;}
+    .newsX2{width:700px;margin-top:500px;}
   </style>
 </head>
 
@@ -54,8 +59,8 @@
         </div>
         <div class='newsIx' style="margin:0 auto;">
           <ul>
-            <li class="newsIxHover">1</li>
             <input type="button" value="上一页" id='input1'>
+            <li class="newsIxHover">1</li>
             <li>2</li>
             <li>3</li>
             <li>4</li>
@@ -67,6 +72,23 @@
             <a href="" style="display:none" id='a2'></a>
             <a href="" style="display:none" id='a3'></a>
             <a href="" style="display:none" id='a4'></a>
+        </div>
+    </div>
+    <div class='newsX2' style="margin:auto;">
+        <h6>苹果CEO库克现身同性恋游行背指出柜 全部评论（10）</h6>
+        <div class='newsIx2' style="margin:auto;">
+          <ul>
+            <li class='newsIxHover2'>1</li>
+            <li class='newsIxHover2'>2</li>
+            <input type="button" value="上一页" id='input11'>
+            <input type="button" value="上一页" id='input12'>
+          </ul>
+          <hr/>
+          <p><span id='person11'></span><br/><span id='comment11'></span><br/><span id='time11'></span> <span id='source11'></span> 转发 回复</p><hr/>
+          <p><span id='person12'></span><br/><span id='comment12'></span><br/><span id='time12'></span> <span id='source12'></span> 转发 回复</p><hr/>
+          <p><span id='person13'></span><br/><span id='comment13'></span><br/><span id='time13'></span> <span id='source13'></span> 转发 回复</p><hr/>
+          <p><span id='person14'></span><br/><span id='comment14'></span><br/><span id='time14'></span> <span id='source14'></span> 转发 回复</p><hr/>
+          <p><span id='person15'></span><br/><span id='comment15'></span><br/><span id='time15'></span> <span id='source15'></span> 转发 回复</p><hr/>
         </div>
     </div>
   </div>
@@ -116,6 +138,61 @@
 
       document.querySelector('#input2').addEventListener('click',function(evt){fg=4;ajax();evt.stopPropagation();});
       document.querySelector('#input1').addEventListener('click',function(evt){fg=0;ajax();evt.stopPropagation();});
+    }();
+  </script>
+  <script>
+    void function(){
+      var url='news1.json';
+      var fg=0;
+
+      function processData(data){
+        document.querySelector('#person11').innerHTML=data['news1'][0+fg].name1;
+        document.querySelector('#person12').innerHTML=data['news1'][1+fg].name1;
+        document.querySelector('#person13').innerHTML=data['news1'][2+fg].name1;
+        document.querySelector('#person14').innerHTML=data['news1'][3+fg].name1;
+        document.querySelector('#person15').innerHTML=data['news1'][4+fg].name1;
+
+        document.querySelector('#comment11').innerHTML=data['news1'][0+fg].comment;
+        document.querySelector('#comment12').innerHTML=data['news1'][1+fg].comment;
+        document.querySelector('#comment13').innerHTML=data['news1'][2+fg].comment;
+        document.querySelector('#comment14').innerHTML=data['news1'][3+fg].comment;
+        document.querySelector('#comment15').innerHTML=data['news1'][4+fg].comment;
+
+        document.querySelector('#time11').innerHTML=data['news1'][0+fg].time1;
+        document.querySelector('#time12').innerHTML=data['news1'][1+fg].time1;
+        document.querySelector('#time13').innerHTML=data['news1'][2+fg].time1;
+        document.querySelector('#time14').innerHTML=data['news1'][3+fg].time1;
+        document.querySelector('#time15').innerHTML=data['news1'][4+fg].time1;
+
+        document.querySelector('#source11').innerHTML=data['news1'][0+fg].source1;
+        document.querySelector('#source12').innerHTML=data['news1'][1+fg].source1;
+        document.querySelector('#source13').innerHTML=data['news1'][2+fg].source1;
+        document.querySelector('#source14').innerHTML=data['news1'][3+fg].source1;
+        document.querySelector('#source15').innerHTML=data['news1'][4+fg].source1;
+      }
+
+      function handler(){
+        if(this.readyState==this.DONE){
+          if(this.status==200){
+            try{
+              processData(JSON.parse(this.responseText));
+            }catch(ex){
+              console.log(JSON.parse(this.responseText));
+              console.log(ex.message);
+            }
+          }
+        }
+      }
+
+      function ajax(){
+        var client=new XMLHttpRequest();
+        client.onreadystatechange=handler;
+        client.open('GET',url);
+        client.send();
+      }
+      ajax();
+
+      $(".newsIx2 li").click(function(){fg=$(".newsIx li").index(this)*5;ajax();});
     }();
   </script>
 </body>

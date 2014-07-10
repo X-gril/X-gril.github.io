@@ -85,7 +85,7 @@
         if(this.readyState==this.DONE){
           if(this.status==200){
             try{
-              processData(JSON.parse(this.responseText)[0]);
+              processData(JSON.parse(this.responseText));
             }catch(ex){
               console.log(ex.message);
             }

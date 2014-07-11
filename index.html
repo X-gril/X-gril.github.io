@@ -13,7 +13,7 @@
         var t=true;
 
         function imageAppear(i){
-            $(".newsImg img").eq(i).stop(true,true).fadeIn(1000).siblings("img").hide();
+            $(".newsImg acronym").eq(i).eq(1).stop(true,true).fadeIn(1000).siblings("img").hide();
             $(".newsIx li").removeClass("newsIxHover");
             $(".newsIx li").eq(i).addClass("newsIxHover");
             $(".newsTp a").eq(i).stop(true,true).fadeIn(1000).siblings("a").hide("slow");

@@ -58,10 +58,10 @@
     <div class='newsX' style="margin:0 auto;">
         <h4>新闻连连看</h4>
         <div class='newsImg'>
-          <img src="" width='100%' height='100%' id='image1'>
-          <img src="" width='100%' height='100%' id='image2'>
-          <img src="" width='100%' height='100%' id='image3'>
-          <img src="" width='100%' height='100%' id='image4'>
+          <acronym title='' id='ac1'></acronym><img src="" width='100%' height='100%' id='image1'></acronym>
+          <acronym titlt='' id='ac2'></acronym><img src="" width='100%' height='100%' id='image2'></acronym>
+          <acronym title='' id='ac3'></acronym><img src="" width='100%' height='100%' id='image3'></acronym>
+          <acronym title='' id='ac4'></acronym><img src="" width='100%' height='100%' id='image4'></acronym>
         </div>
         <div class='newsIx' style="margin:0 auto;">
           <ul>
@@ -234,6 +234,11 @@
       else{fg=Number(localStorage.getItem('a'));}
 
       function processData(data){
+        document.querySelector('#ac1').setAttribute('title',data['data'][0+fg].tips);
+        document.querySelector('#ac2').setAttribute('title',data['data'][1+fg].tips);
+        document.querySelector('#ac3').setAttribute('title',data['data'][2+fg].tips);
+        document.querySelector('#ac4').setAttribute('title',data['data'][3+fg].tips);
+        
         document.querySelector('#image1').setAttribute('src',data['data'][0+fg].image);
         document.querySelector('#image2').setAttribute('src',data['data'][1+fg].image);
         document.querySelector('#image3').setAttribute('src',data['data'][2+fg].image);

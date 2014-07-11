@@ -234,7 +234,6 @@
       else{fg=Number(localStorage.getItem('a'));}
 
       function processData(data){
-        console.log(data);
         document.querySelector('#ac1').setAttribute('title',data['data'][0+fg].tips);
         document.querySelector('#ac2').setAttribute('title',data['data'][1+fg].tips);
         document.querySelector('#ac3').setAttribute('title',data['data'][2+fg].tips);

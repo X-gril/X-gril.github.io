@@ -13,8 +13,8 @@
         var t=true;
 
         function imageAppear(i){
-            $("#ac"+i).stop(true,true).fadeIn(1000).siblings("acronym").hide();
-            $("#image"+i).stop(true,true).fadeIn(1000).siblings("img").hide();
+            $("#ac"+(i+1)).stop(true,true).fadeIn(1000).siblings("acronym").hide();
+            $("#image"+(i+1)).stop(true,true).fadeIn(1000).siblings("img").hide();
             $(".newsIx li").removeClass("newsIxHover");
             $(".newsIx li").eq(i).addClass("newsIxHover");
             $(".newsTp a").eq(i).stop(true,true).fadeIn(1000).siblings("a").hide("slow");

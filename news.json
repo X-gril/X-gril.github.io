@@ -4,49 +4,57 @@
 	  {
 		"image":"http://img3.ppsj.com.cn/632/6322/4782679380.jpg",
 		"news":"http://jewelry.ppsj.com.cn/2014-7-10/4651202759.html",
-		"Name":"香奈儿(chanel)最新珠宝广告大片"
+		"Name":"香奈儿(chanel)最新珠宝广告大片",
+		"tips":"香奈儿(chanel)最新珠宝广告大片由莫妮卡·雅克 (Jac Monika Jagaciak)演绎。"
 	  },
 
       {
     	"image":"http://img.ycwb.com/news/attachement/jpg/site2/20140709/0021976eb6081526ea5726.jpg",
     	"news":"http://news.ycwb.com/picstorage/2014-07/09/content_7162902.htm",
-    	"Name":"直击巴黎高定时装周：香奈儿秋冬大秀上演"
+    	"Name":"直击巴黎高定时装周：香奈儿秋冬大秀上演",
+    	"tips":"当地时间2014年7月8日，法国巴黎，2014巴黎高定时装周秋冬，香奈儿(Channel)品牌秀场。"
       },
 
       {
     	"image":"http://www.bundpic.com/upload/images/96/8916e3951f2857edbb2a6b097d8aa1d0.jpg",
     	"news":"http://www.bundpic.com/2013/08/23180.shtml",
-    	"Name":"探访动画帝国皮克斯总部"
+    	"Name":"探访动画帝国皮克斯总部",
+    	"tips":"《怪兽大学》概念图。这是 2001 年《怪兽电力公司》的前传，讲述“毛怪”詹姆士·苏利文和“大眼仔”麦克·华斯基在成为最佳拍档前的校园故事。"
       },
 
       {
     	"image":"http://sp.chinadaily.com.cn/uploads/allimg/140621/23360A406-0.jpg",
     	"news":"http://spzx.foods1.com/show_2576507.htm",
-    	"Name":"嘿！重庆小面。"
+    	"Name":"嘿！重庆小面。",
+    	"tips":"嘿！小面。走进去，整二两，熨帖味蕾、填饱肚腹之后，干筋火旺地转身投入烟火尘世继续打拼。"
       },
       
       {
     	"image":"http://img.gmw.cn/images/attachement/jpg/site2/20140707/eca86bd9dc461524a98b17.jpg",
     	"news":"http://www.gmw.cn/cg/2014-07/07/content_11871588.htm",
-    	"Name":"《X战警-逆转未来》"
+    	"Name":"《X战警-逆转未来》",
+    	"tips":"《X战警：逆转未来》最新原画：变种人大杀器诞生"
       },
       
       {
     	"image":"http://img1.gtimg.com/ent/pics/hv1/239/8/1649/107228504.jpg",
     	"news":"http://cd.qq.com/a/20140710/024181.htm",
-    	"Name":"苏打绿演唱《小时代3》主题曲《微光》MV曝光"
+    	"Name":"苏打绿演唱《小时代3》主题曲《微光》MV曝光",
+    	"tips":"苏打绿为《小时代3》量身打造联合主题曲《微光》。该曲由吴青峰作曲，郭敬明亲自作词."
       },
       
       {
     	"image":"http://y1.ifengimg.com/cmpp/2014/07/09/14/a5e6baf6-2906-4ab4-99c5-83c5a7cbcf01.jpg",
     	"news":"http://news.ifeng.com/a/20140709/41086095_0.shtml",
-    	"Name":"神曲《小苹果》"
+    	"Name":"神曲《小苹果》",
+    	"tips":"检验一首歌能否被称为“神曲”，只需要去两个地方：广场和健身房。现在不少广场和健身房有了一首全新“神曲”《小苹果》。"
       },
       
       {
     	"image":"http://i3.static.olcdn.com/cms/201407/10/Mzc11404957646577_500.jpg",
     	"news":"http://news.766.com/dl/2014-07-10/2319591.shtml",
-    	"Name":"火影来了!7月18日《忍者降临》首测"
+    	"Name":"火影来了!7月18日《忍者降临》首测",
+    	"tips":"要玩就玩原画火影！7月18日，万众瞩目的神还原《火影忍者》原画手游越狱版即将删档首测！"
       }
     ]
 }

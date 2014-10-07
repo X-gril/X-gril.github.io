@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<style type="text/css">
+h6 {margin-bottom:0;font-size:30px;text-align: center;}
+div.transbox
+{
+  margin-left: 0;
+  margin-right:0;
+  width: 100%;
+  height: 100%;
+  padding:0;
+  background-color: #ffffff;
+  border: 0;
+  /* for IE */
+  filter:alpha(opacity=50);
+  /* CSS3 standard */
+  opacity:0.6;
+}
+
+div.transbox p
+{
+  margin: 40px 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #000000;
+  font:bold 20px;
+  line-height:1.5;
+}
+div#center0 {width:1000px;margin-left: 160px;margin-right:160px;margin-top: 10%;}
+body 
+  {
+  background-image:url(white1.jpg);
+  background-repeat:repeat-x;
+  background-attachment:fixed
+  }
+p {text-indent: 5%;white-space: pre;
+   font-family:"微软雅黑",Georgia,Serif;padding-top: 30px;}
+</style>
+</head>
+
+<body>
+  <div id="center0" class="transbox">
+    <h6>软工大作业之Windows环境下部署popush</h6>
+    <p>看这个题目就知道了，我在软工大作业小组中做的是Windows下的popush部署工作。我电脑上的系统是win7，看似与作业要求
+    中给出的win8下部署的资料中会有不同，但事实上几乎没有差别。安装的过程比较琐碎，会遇到一些奇奇怪怪的小问题。尽管给
+    出的资料已经很详尽了，但每个人的电脑里的各种设置，每个人的一些电脑使用习惯都会不一样，所以难免会有遇到麻烦的时候
+    。但是绝大部分按照资料上给出的步骤安装下来，终于部署好了popush。不仅能够访问popush的各个页面，并且能在popush上成
+    功登录注册，并且添加各种新文件，能够正常运行和调试C、C++、Java、Perl、Python、Ruby、Lua这7种语言的程序。</p>
+    <p>在整个安装部署的过程中，总的来说还算比较顺利，没有遇到什么像80端口被占用之类的情况。在配置基本功能环境的时候，
+    软件资源比较好找，一般来说下载一些版本在要求的版本及以上都不会遇到什么问题，我亲身试验过。在部署编程功能环境的时
+    候稍微麻烦一点儿。主要是那些需要配备的软件有些已经在电脑上存在了，于是我们还要区分哪些没有装，从而需要去下载一些
+    相关软件，这个过程比较琐碎，而且有些可能在不知情的情况下重复安装一些东西，不好区分。不过还好，要有耐心，一点一点
+    安装配置，而且配置过程中也得格外小心，有些文件里面的内容需要更改。否则会得不到我们想要的效果。这会让人很抓狂。。
+    不可马虎大意。在基本环境中创建相关文件还算比较顺利，只是在某个阶段发现虽然能正确访问网址http://localhost:4444和
+    http://localhost/socket，但是那个页面上却没有出现什么welcome之类的语句。后来在助教的帮助下，才发现socket.io这个
+    模块是1.1.0的版本，不提示welcome了。光这一点就耗费了2~3个小时的时间，这可能也是windows部署popush资料在撰写的时
+    候版本还没有更新到1.1.0的缘故，所以没有明确说出这一点，希望能够添加进去吧~然后就是到编程环境的配置了。这一部分我
+    花了较长的时间，主要是系统的环境变量没有弄好。主要是因为我之前很少涉及修改或添加环境变量，所以对环境变量这部分的
+    部署比较陌生。原来winGW的环境变量应该写在那6种语言的环境变量的前面，才可以在popush中正常运行各种语言的程序和调试
+    。不过还好，总算是一步步解决了部署过程中遇到的困惑，部署成功。</p>
+    <p>其实在分工的时候选择windows下的popush部署是因为我电脑上装的windows系统，想图个方便。也可能是想避免一些某些我
+    还比较陌生的知识吧~但是后来据说这4项任务中耗时最久的反而是windows下的popush部署。怎么说呢，阴差阳错吧~让我挺感慨
+    的。我希望自己可以在今后的合作中主动去接触更多的陌生的知识，更加勇敢~如果我能做到这个的话，我觉得这可能会是软件
+    工程这门课带给我的更大的收获~当然啦，软件工程（3）本身的知识量也会让我收获很多，也会让我在投身于大作业的时候多一
+    份耐心；面对困难的时候，多一份淡定和睿智；面对队友的时候，也能更多的设身处地地换位思考，从而能够建立更加默契的合
+    作关系。组内成员间，互相帮助，互相鼓励，这是最让我觉得开心的地方，会让我有很强的动力，效率也会提高很多。我想，这
+    之中也有一份责任感吧~总之，继续加油啦，哈哈哈~~
+    
+                                                                                                                                          ----萧大侠是也（笔名）</p>
+
+  </div>
+</body>
+</html>
